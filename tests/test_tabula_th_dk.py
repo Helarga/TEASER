@@ -182,6 +182,7 @@ class Test_tabula_th_dk(object):
         #     sum(wall.area for wall in
         #         prj.buildings[-1].thermal_zones[-1].doors), 1) == 2.0
     #
+
     def test_tabula_de_th_dk_area_1997(self):
         """
         Test for area estimation of tabula th
@@ -211,6 +212,7 @@ class Test_tabula_th_dk(object):
         #     sum(wall.area for wall in
         #         prj.buildings[-1].thermal_zones[-1].doors), 1) == 2.0
     #
+
     def test_tabula_de_th_dk_area_2005(self):
         """
         Test for area estimation of tabula th
@@ -269,8 +271,8 @@ class Test_tabula_th_dk(object):
         #     sum(wall.area for wall in
         #         prj.buildings[-1].thermal_zones[-1].doors), 1) == 2.0
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#test for U-value
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# test for U-value
 
     def test_tabula_uvalue_standard_th_dk_1849(self):
 
@@ -287,8 +289,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.6 - 0.17)), 1)
-
-
 
         for wall in prj.buildings[-1].thermal_zones[-1].outer_walls:
             if "_1_" in wall.construction_type:
@@ -369,7 +369,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.2 - 0.14)), 1)
-
 
         assert round(
             1 / (prj.buildings[-1].thermal_zones[-1].outer_walls[-1].r_conduc
@@ -551,13 +550,13 @@ class Test_tabula_th_dk(object):
                  * prj.buildings[-1].thermal_zones[-1].outer_walls[-1].area),
             1) == round((1 / (1 / 0.3 - 0.17)), 1)
 
-            # if "_1_" in wall.construction_type:
-            #     assert round(1 / (wall.r_conduc * wall.area),
-            #                  1) == round((1 / (1 / 0.6 - 0.17)), 1)
-            #
-            # if "_2_" in wall.construction_type:
-            #     assert round(1 / (wall.r_conduc * wall.area),
-            #                  1) == round((1 / (1 / 0.6 - 0.17)), 1)
+        # if "_1_" in wall.construction_type:
+        #     assert round(1 / (wall.r_conduc * wall.area),
+        #                  1) == round((1 / (1 / 0.6 - 0.17)), 1)
+        #
+        # if "_2_" in wall.construction_type:
+        #     assert round(1 / (wall.r_conduc * wall.area),
+        #                  1) == round((1 / (1 / 0.6 - 0.17)), 1)
 
         assert round(
             1 / (prj.buildings[-1].thermal_zones[-1].ground_floors[-1].r_conduc
@@ -609,8 +608,8 @@ class Test_tabula_th_dk(object):
         #          * prj.buildings[-1].thermal_zones[-1].doors[-1].area),
         #     1) == round((1 / (1 / 2.0 - 0.17)), 1)
 
-#--------------------------------------------------------------------------------------------------------------------------------------------S
-#test for U-value retrofit
+# --------------------------------------------------------------------------------------------------------------------------------------------S
+# test for U-value retrofit
 
     def test_tabula_uvalue_retrofit_th_dk_1849(self):
 
@@ -627,8 +626,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.12 - 0.17)), 1)
-
-
 
         for wall in prj.buildings[-1].thermal_zones[-1].outer_walls:
             if "_1_" in wall.construction_type:
@@ -709,7 +706,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.13 - 0.14)), 1)
-
 
         assert round(
             1 / (prj.buildings[-1].thermal_zones[-1].outer_walls[-1].r_conduc
@@ -886,9 +882,9 @@ class Test_tabula_th_dk(object):
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.13 - 0.21)), 1)
 
-#-----------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
 
-#test for U-value adv retrofit
+# test for U-value adv retrofit
 
     def test_tabula_uvalue_adv_retrofit_th_dk_1849(self):
 
@@ -905,8 +901,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.09 - 0.17)), 1)
-
-
 
         for wall in prj.buildings[-1].thermal_zones[-1].outer_walls:
             if "_1_" in wall.construction_type:
@@ -987,7 +981,6 @@ class Test_tabula_th_dk(object):
             1 / (prj.buildings[-1].thermal_zones[-1].rooftops[-1].r_conduc
                  * prj.buildings[-1].thermal_zones[-1].rooftops[-1].area),
             1) == round((1 / (1 / 0.09 - 0.14)), 1)
-
 
         assert round(
             1 / (prj.buildings[-1].thermal_zones[-1].outer_walls[-1].r_conduc

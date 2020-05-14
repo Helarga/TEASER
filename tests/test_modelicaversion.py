@@ -30,7 +30,7 @@ class TestModelicaVersions(object):
 
         try:
             token = os.environ['GH_Token']
-        except:
+        except BaseException:
             token = None
         if token:
             git = Github(login_or_token=token)

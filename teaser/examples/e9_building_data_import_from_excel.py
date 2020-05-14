@@ -90,7 +90,7 @@ def import_data(path=None, sheet_names=None):
 
     # process an import of a single sheet as well as several sheets,
     # which will be concatenated with an continuous index
-    if type(sheet_names) == list:
+    if isinstance(sheet_names, list):
         data = pd.DataFrame()
         _data = pd.read_excel(io=path, sheet_name=sheet_names, header=0, index_col=None)
         for sheet in sheet_names:
@@ -101,7 +101,7 @@ def import_data(path=None, sheet_names=None):
         data = pd.read_excel(io=path, sheet_name=sheet_names, header=0, index_col=0)
 
     # Cut of leading or tailing white spaces from any string in the dataframe
-    data = data.applymap(lambda x: x.strip() if type(x) is str else x)
+    data = data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
     # Convert every N/A, nan, empty strings and strings called N/a, n/A, NAN,
     # nan, na, Na, nA or NA to np.nan

@@ -228,7 +228,7 @@ class Window(BuildingElement):
             try:
                 value = float(value)
                 self._g_value = value
-            except:
+            except BaseException:
                 raise ValueError("Can't convert g value to float")
 
     @property
@@ -246,7 +246,7 @@ class Window(BuildingElement):
             try:
                 value = float(value)
                 self._a_conv = value
-            except:
+            except BaseException:
                 raise ValueError("Can't convert a conv to float")
 
     @property
@@ -264,7 +264,7 @@ class Window(BuildingElement):
             try:
                 value = float(value)
                 self._shading_g_total = value
-            except:
+            except BaseException:
                 raise ValueError("Can't convert shaded g value to float")
 
     @property
@@ -282,5 +282,5 @@ class Window(BuildingElement):
             try:
                 value = float(value)
                 self._shading_max_irr = value
-            except:
+            except BaseException:
                 raise ValueError("Can't convert max irradiation to float")
